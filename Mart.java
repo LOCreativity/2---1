@@ -2,7 +2,6 @@ class Mart{
 	
 	private int purchase;
 	private boolean member;
-	private int result;
 	private int plusdis = 0;
 	
 	public Mart(int purchase) {
@@ -14,26 +13,26 @@ class Mart{
 	}
 	public int Sale() {
 		
-		if(member) {
-			plusdis = purchase / 10; 
+		if(this.member) {
+			this.plusdis = this.purchase / 10; 
 		}
 		
-		if(purchase >= 10000 && purchase < 50000) {
-			result = purchase - (purchase/20) - plusdis;
+		if(this.purchase >= 10000 && this.purchase < 50000) {
+			this.purchase -= this.(purchase/20);
 		}
-		else if(purchase >= 50000 && purchase < 100000) {
-			result = purchase - (purchase/10) - plusdis;
+		else if(this.purchase >= 50000 && this.purchase < 100000) {
+			this.purchase -= this.purchase/10;
 		}
-		else if(purchase >= 100000 && purchase < 1000000) {
-			result = purchase - (purchase/5) - plusdis;
+		else if(this.purchase >= 100000 && this.purchase < 1000000) {
+			this.purchase -= this.purchase/5;
 		}
-		else if(purchase >= 0 && purchase < 10000) {
-			result = purchase;
+		else if(this.purchase >= 0 && this.purchase < 10000) {
+			return this.purchase - this.plusdis;
 		}
-		else if(purchase > 1000000 || purchase < 0) {
-			System.out.println("°ªÀÌ ¹üÀ§¸¦ ¹þ¾î³µ½À´Ï´Ù.");
+		else if(this.purchase > 1000000 || this.purchase < 0) {
+			System.out.println("ê°’ì´ ë²”ìœ„ë¥¼ ë²—ì–´ë‚¬ìŠµë‹ˆë‹¤.");
 			return 0;
 		}
-		return result;
+		return this.purchase - this.plusdis;
 	}
 }
